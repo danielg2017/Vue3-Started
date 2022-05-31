@@ -1,6 +1,13 @@
 # vue-started
 
+## Para Crear de 0
+
+npm install -g @vue/cli
+```
+
 ## Project setup
+```
+
 ```
 npm install
 ```
