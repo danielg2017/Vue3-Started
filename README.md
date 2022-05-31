@@ -5,9 +5,7 @@
 npm install -g @vue/cli
 ```
 
-## Project setup
-```
-
+### Project setup
 ```
 npm install
 ```
