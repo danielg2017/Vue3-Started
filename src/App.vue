@@ -1,11 +1,12 @@
 <template>
     <div>
         <h1>Vue 3 Js</h1>
-        <Car :power="power" />
+        <Car :power="power" :upPower="upPower" />
     </div>
 </template>
 
 <script>
+import { ref } from "vue"; // importar la funcion ref de vue para crear una referencia
 import Car from "./components/Car.vue";
 
 export default {
@@ -14,9 +15,17 @@ export default {
     },
 
     setup() {
-        let power = 580;
+        let power = ref(580); // crear una referencia para el valor de la potencia
+
+        const upPower = () => {
+            // crear una funcion para aumentar la potencia
+            power.value += 10; // aumentar la potencia
+            console.log("aumentar power...");
+        };
+
         return {
             power,
+            upPower,
         };
     },
 };
