@@ -1,20 +1,23 @@
 <template>
     <div>
         <h1>Vue 3 Js</h1>
-        <CarOption />
-        <hr />
-        <CarComposition />
+        <Car :power="power" />
     </div>
 </template>
 
 <script>
-import CarComposition from "./components/CarComposition.vue";
-import CarOption from "./components/CarOption.vue";
+import Car from "./components/Car.vue";
 
 export default {
     components: {
-        CarComposition,
-        CarOption,
+        Car,
+    },
+
+    setup() {
+        let power = 580;
+        return {
+            power,
+        };
     },
 };
 </script>
