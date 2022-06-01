@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 # Vue3-started
+=======
+# Vue3-Started
+>>>>>>> 4880f75ffd23d92aa3743b6a65e676f9c70dea17
 
 <<<<<<< HEAD
 ## Project setup
