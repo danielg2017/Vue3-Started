@@ -1,11 +1,26 @@
 <template>
     <div>
         <h2>Coche</h2>
-        <!-- Asi se utiliza la variable con Options API, vue2  y tambien con composition Api, vue3-->
+        <!-- Asi se utiliza la variable -->
+
         <p>Marca: {{ marca }}</p>
         <p>Modelo: {{ modelo }}</p>
-        <p>Color: {{ color[0] }}</p>
-        asi se accede a un array de objetos
+        <p>
+            Color:
+
+            // Recorriendo sobre la matriz e imprimiendo el índice y el valor de la matriz en un span.
+            <span v-for="(color, index) in colors" :key="index">
+                {{ index }}: {{ color }}
+            </span>
+        </p>
+        <p> Color:
+            // Recorriendo sobre la matriz de colores e imprimiendo el índice y el valor de la matriz en una lista .
+            <ul>
+            <li v-for="(color, index) in colors" :key="index">
+                {{ index }}: {{ color }} -
+            </li>
+        </ul></p>
+        <!-- asi se accede a un array de objetos -->
         <p>Velocidad: {{ velocidad }} km/h</p>
         <p>Potencia: {{ caballos }}</p>
         {{ mensaje.title }} - {{ mensaje.text }}
@@ -15,29 +30,12 @@
 
 <script>
 export default {
-    // // Asi se declaran las variables con Options API, vue2
-    // data() {
-    //     return {
-    //         marca: "Ford",
-    //         modelo: "Mustang",
-    //         color: ["Rojo", "Azul", "Blanco", "Negro"], // variable de tipo array
-    //         velocidad: 240,
-    //         caballos: "500",
-    //         mensaje: {
-    //             //variable de tipo objeto
-    //             title: "Una verdadera marca",
-    //             text: "Ford Shelby",
-    //         },
-    //     };
-    // },
-    // // Asi se declaran las variables con Options API, vue2
-
     setup() {
         const marca = "Ford";
         const modelo = "Mustang";
-        const color = ["Rojo", "Azul", "Blanco", "Negro"]; // variable de tipo array
+        const colors = ["Rojo", "Azul", "Blanco", "Negro"]; // variable de tipo array
         const velocidad = "260";
-        const caballos = "520";
+        const caballos = [240, 280, 320, 400, 480, 520, 826];
         const mensaje = {
             //variable de tipo objeto
             title: "Una verdadera marca",
@@ -47,7 +45,7 @@ export default {
         return {
             marca,
             modelo,
-            color,
+            colors,
             velocidad,
             caballos,
             mensaje,
