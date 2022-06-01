@@ -1,7 +1,16 @@
 # Vue3-started
 
+<<<<<<< HEAD
 ## Project setup
 
+=======
+### Para Crear de 0
+```
+npm install -g @vue/cli
+```
+
+### Project setup
+>>>>>>> 30d1ccba5ffaa76e2a29d041bd1c38903759fb43
 ```
 npm install
 ```
