@@ -1,7 +1,7 @@
 <template>
     <div>
         <h1>Vue 3 Js</h1>
-        <Car :power="power" :upPower="upPower" @downPower="downPower" />
+        <Car :power="power" :upPower="upPower" :downPower="downPower" />
     </div>
 </template>
 
