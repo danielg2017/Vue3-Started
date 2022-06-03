@@ -1,7 +1,7 @@
 <template>
     <div>
         <h1>Vue 3 Js</h1>
-        <Car :power="power" :upPower="upPower" />
+        <Car :power="power" :upPower="upPower" :downPower="downPower" />
     </div>
 </template>
 
@@ -19,13 +19,20 @@ export default {
 
         const upPower = () => {
             // crear una funcion para aumentar la potencia
-            power.value += 10; // aumentar la potencia
+            power.value += 10; // aumentar la potencia en 10
             console.log("aumentar power...");
+        };
+
+        const downPower = () => {
+            // crear una funcion para disminuir la potencia
+            power.value -= 10; // disminuir la potencia en 10
+            console.log("disminuir power...");
         };
 
         return {
             power,
             upPower,
+            downPower,
         };
     },
 };

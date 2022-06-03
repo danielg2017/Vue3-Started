@@ -7,6 +7,7 @@
     <!-- <button @click="testPower">Aumentar potencia</button> -->
     <!-- proceso para pasar la funcion de forma directa -->
     <button @click="upPower">Aumentar potencia</button>
+    <button @click="downPower">Disminuir Potencia</button>
 </template>
 
 <script>
@@ -20,7 +21,12 @@ export default {
             type: Function,
             default: () => {},
         },
+        downPower: {
+            type: Function,
+            default: () => {},
+        },
     },
+
     setup(props) {
         const brand = "Ford";
         const model = "Mustang";
