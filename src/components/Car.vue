@@ -1,6 +1,6 @@
 <template>
-    <div>
-        <h2>Coche - Composition API</h2>
+    <div class="content">
+        <h2 class="title">Coche - Composition API</h2>
         <p>Marca: {{ brand }}</p>
         <p>Modelo: {{ model }}</p>
         <p>Potencia: {{ power }}</p>
@@ -57,4 +57,11 @@ export default {
 };
 </script>
 
-<style scoped></style>
+<style lang="scss" scoped>
+.content {
+    background-color: grey;
+    .title {
+        color: #42b983;
+    }
+}
+</style>
